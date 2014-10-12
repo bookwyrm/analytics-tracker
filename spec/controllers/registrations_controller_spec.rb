@@ -26,5 +26,13 @@ RSpec.describe RegistrationsController, type: :controller do
       account = Account.last
       expect(user.account).to eq(account)
     end
+
+    it "Assigns sharding key to account" do
+      post :create, user: post_params
+      account = Account.last
+      user = User.last
+      sharding_key = ShardingHelper.generate_sharding_key(user.email)
+      expect(account.sharding_key).to eq(sharding_key)
+    end
   end
 end
