@@ -1,0 +1,21 @@
+octopus:
+  environments:
+    - development
+  development:
+    shard_0:
+      host: localhost
+      adapter: postgresql
+      database: analytics-tracker_development-0
+    shard_1:
+      host: localhost
+      adapter: postgresql
+      database: analytics-tracker_development-1
+    shard_2:
+      host: localhost
+      adapter: postgresql
+      database: analytics-tracker_development-2
+    shard_3:
+      host: localhost
+      adapter: postgresql
+      database: analytics-tracker_development-3
+
