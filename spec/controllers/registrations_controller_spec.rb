@@ -13,7 +13,9 @@ RSpec.describe RegistrationsController, type: :controller do
     end
 
     it "Creates an account" do
-      pending
+      expect {
+        post :create, user: attributes_for(:user).merge(attributes_for(:account))
+      }.to change(Account, :count).by(1)
     end
 
     it "Associates the user with the account" do
