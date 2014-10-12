@@ -19,4 +19,8 @@ class RegistrationForm < Reform::Form
   def authenticatable_salt
   end
 
+  def save
+    return false unless valid?
+    super
+  end
 end
