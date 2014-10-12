@@ -8,6 +8,10 @@ class SitesController < ApplicationController
     respond_with(@site)
   end
 
+  def index
+    @sites = current_user.account.sites
+  end
+
   def create
     @site = Site.new(site_params)
     @site.account = current_user.account
