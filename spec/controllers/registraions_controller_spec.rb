@@ -8,7 +8,7 @@ RSpec.describe RegistrationsController, type: :controller do
   describe "POST #create" do
     it "Creates a user" do
       expect {
-        post :create, user: attributes_for(:user)
+        post :create, registration: attributes_for(:user).merge(attributes_for(:account))
       }.to change(User, :count).by(1)
     end
 
