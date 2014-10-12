@@ -21,7 +21,10 @@ RSpec.describe RegistrationsController, type: :controller do
     end
 
     it "Associates the user with the account" do
-      pending
+      post :create, user: post_params
+      user = User.last
+      account = Account.last
+      expect(user.account).to eq(account)
     end
   end
 end
