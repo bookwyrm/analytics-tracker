@@ -6,15 +6,17 @@ RSpec.describe RegistrationsController, type: :controller do
   end
 
   describe "POST #create" do
+    let(:post_params) { attributes_for(:user).merge(attributes_for(:account)) }
+
     it "Creates a user" do
       expect {
-        post :create, user: attributes_for(:user).merge(attributes_for(:account))
+        post :create, user: post_params
       }.to change(User, :count).by(1)
     end
 
     it "Creates an account" do
       expect {
-        post :create, user: attributes_for(:user).merge(attributes_for(:account))
+        post :create, user: post_params
       }.to change(Account, :count).by(1)
     end
 
