@@ -6,13 +6,13 @@ RSpec.describe RegistrationsController, type: :controller do
   end
 
   describe "POST #create" do
-    it "Creates an account" do
+    it "Creates an user" do
       expect {
         post :create, user: attributes_for(:user)
       }.to change(User, :count).by(1)
     end
 
-    it "Creates a user" do
+    it "Creates an account" do
       pending
     end
 
