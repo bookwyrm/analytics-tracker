@@ -38,7 +38,7 @@
           <% if user_signed_in? %>
             <li><p class="navbar-text">Logged in as <strong><%= current_user.email %></strong>.</p></li>
             <li class="divider"></li>
-            <li><%= link_to 'Edit Profile', edit_user_registraion_path(current_user) %></li>
+            <li><%= link_to 'Edit Profile', edit_user_registration_path(current_user) %></li>
             <li class="divider"></li>
             <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
           <% else %>
