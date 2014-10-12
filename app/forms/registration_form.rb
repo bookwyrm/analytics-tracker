@@ -25,6 +25,7 @@ class RegistrationForm < Reform::Form
     sync
     user = model[:user]
     user.account = model[:account]
+    model[:account].sharding_key = ShardingHelper.generate_sharding_key(user.email)
     user.save
   end
 end
