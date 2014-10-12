@@ -21,6 +21,9 @@ class RegistrationForm < Reform::Form
 
   def save
     return false unless valid?
-    super
+    sync
+    user = model[:user]
+    user.account = model[:account]
+    user.save
   end
 end
