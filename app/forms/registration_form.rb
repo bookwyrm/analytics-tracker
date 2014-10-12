@@ -8,8 +8,9 @@ class RegistrationForm < Reform::Form
 
   model :user
 
-  extend ActiveModel::ModelValidations
-  copy_validations_from User
+  validates :email, presence: true
+  validates :password, presence: true, confirmation: true
+  validates :password, length: { minimum: 8 }
   validates :company_name, presence: true
 
   def active_for_authentication?
