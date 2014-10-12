@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :accounts
   resources :sites
 
+  get "track-entry/:account_id/:site_id" => "analytics_entries#track_entry", as: :track_entry
+
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
