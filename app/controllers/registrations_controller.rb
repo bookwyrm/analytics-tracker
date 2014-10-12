@@ -12,6 +12,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   def build_resource(hash = nil)
     self.resource = registration_form = RegistrationForm.new(user: User.new, account: Account.new)
+    unless hash.nil? || hash.length == 0
+      self.resource.validate hash
+    end
   end
 
   def after_sign_up_path_for(resource)
