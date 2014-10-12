@@ -181,8 +181,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    sextant (0.2.4)
-      rails (>= 3.2)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
     simple_form (3.1.0.rc2)
@@ -249,7 +247,6 @@ DEPENDENCIES
   rspec-rails (~> 3.1.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
-  sextant (~> 0.2.4)
   shoulda-matchers (~> 2.7.0)
   simple_form (~> 3.1.0.rc2)
   spring

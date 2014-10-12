@@ -38,7 +38,6 @@ gem 'virtus', '~> 1.0.3'
 group :development do
   gem 'better_errors', '~> 2.0.0'
   gem 'quiet_assets', '~> 1.0.3'
-  gem 'sextant', '~> 0.2.4'
 end
 
 group :development, :test do
