@@ -2,10 +2,10 @@
 
 <table class="table">
   <tbody>
-<% @sites.each do |site| %>
-<tr>
-  <td><%= link_to site.domain_name, site_path(site.id) %></td>
-</tr>
-<% end %>
-</tbody>
+    <% @sites.each do |site| %>
+      <tr>
+        <td><%= link_to site.domain_name, site_path(site.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
