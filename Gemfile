@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 
+gem 'ar-octopus', '~> 0.8.3'
 gem 'autoprefixer-rails', '~> 3.1.1.20141001'
 gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'devise', '~> 3.4.0'
