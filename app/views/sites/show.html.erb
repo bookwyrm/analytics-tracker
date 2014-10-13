@@ -6,7 +6,8 @@
 </p>
 <pre><code>http://localhost:5000/track-entry/<%= @site.account.id %>/<%= @site.id %></code></pre>
 
-<% cache ['entries', @site] do %>
+<p>Entry count: <%= @site.entry_count %></p>
+<% cache ['entries', @site, @site.entry_count] do %>
   <h2>Entries</h2>
   <table class="table">
     <tbody>
