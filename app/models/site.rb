@@ -1,4 +1,4 @@
 class Site < ActiveRecord::Base
   belongs_to :account
-  has_many :anlaytics_entries
+  has_many :analytics_entries
 end
