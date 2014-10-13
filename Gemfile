@@ -42,6 +42,7 @@ gem 'virtus', '~> 1.0.3'
 group :development do
   gem 'better_errors', '~> 2.0.0'
   gem 'quiet_assets', '~> 1.0.3'
+  gem 'rack-mini-profiler', '~> 0.9.2'
 end
 
 group :development, :test do
