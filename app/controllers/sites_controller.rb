@@ -20,7 +20,8 @@ class SitesController < ApplicationController
   end
 
   def show
-    respond_with(@site)
+    @entries = AnalyticsEntry.using(ShardingHelper.shard_symbol_for_key @site.account.sharding_key).where(site: @site)
+    respond_with(@site, @entries)
   end
 
   private

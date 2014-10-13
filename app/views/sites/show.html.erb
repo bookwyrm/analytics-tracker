@@ -6,3 +6,16 @@
 </p>
 <pre><code>http://localhost:5000/track-entry/<%= @site.account.id %>/<%= @site.id %></code></pre>
 
+<h2>Entries</h2>
+<table class="table">
+  <tbody>
+    <% @entries.each do |entry| %>
+      <tr>
+        <td>
+          <%= content_tag(:span, entry.created_at, 'data-js-format-datetime' => true) %>
+        </td>
+        <td><%= entry.user_agent %></td>
+      </tr>
+    <% end %>
+  </tbody>
+<table>
