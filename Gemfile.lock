@@ -156,6 +156,9 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    redis (3.1.0)
+    redis-store (1.1.4)
+      redis (>= 2.2)
     representable (2.0.4)
       multi_json
       nokogiri
@@ -252,6 +255,7 @@ DEPENDENCIES
   poltergeist (~> 1.5.1)
   quiet_assets (~> 1.0.3)
   rails (= 4.1.6)
+  redis-store (~> 1.1.4)
   reform!
   rspec-rails (~> 3.1.0)
   sass-rails (~> 4.0.3)
