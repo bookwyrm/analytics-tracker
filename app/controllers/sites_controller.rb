@@ -26,8 +26,7 @@ class SitesController < ApplicationController
 
   private
     def set_site
-      # TODO set scoping for user/account
-      @site = Site.find(params[:id])
+      @site = current_user.account.sites.find(params[:id])
     end
 
     def site_params
